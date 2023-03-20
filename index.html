@@ -18,15 +18,15 @@
         <hr>
 
         <ul id="ToDoList">
-            <li v-for="ListElements in ToDoList" :class="ListElements.done == true ? 'done' : ''">
-                {{ListElements.text}}
+            <li v-for="(ListElements, index) in ToDoList" :class="ListElements.done == true ? 'done' : ''">
+                {{ListElements.text}} <span class="delete" @click="deleteElement(index)">X</span>
             </li>
         </ul>
         
         <hr>
 
-        <input type="text">
-        <button></button>
+        <input type="text" v-model="NewElement.text">
+        <button @click="addElement()">Nuovo Elemento</button>
     </main>
 
     <script src="js/script.js"></script>

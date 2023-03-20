@@ -23,6 +23,25 @@ const { createApp } = Vue
         },
             
         ],
+        
+        NewElementText: "",
+
+        NewElement: {
+            text: "",
+            done: false
+        },
       }
-    }
+    },
+
+    methods: {
+        deleteElement(ListElementsIndex){
+            this.ToDoList.splice(ListElementsIndex, 1);
+        },
+        
+        addElement(){
+
+            this.ToDoList.push(this.NewElement);
+        }
+    },
+    
   }).mount('#app')

@@ -9,6 +9,12 @@
     text-decoration: line-through;
 }
 
+.delete{
+    text-decoration: none;
+    color: red;
+    cursor: pointer;
+}
+
 #ToDoList{
     padding: 1%;
 }
